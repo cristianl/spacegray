@@ -1,5 +1,27 @@
 [
 
+    // Tabs dropdown
+    {
+        "class": "show_tabs_dropdown_button",
+        "layer0.texture": "Theme - Default/common/light/tab_dropdown.png",
+        "layer0.opacity": { "target": 0.35, "speed": 4.0, "interpolation": "smoothstep" },
+        "content_margin": [10, 10]
+    },
+    {
+        "class": "show_tabs_dropdown_button",
+        "attributes": ["hover"],
+        "layer0.opacity": { "target": 0.9, "speed": 4.0, "interpolation": "smoothstep" }
+    },
+
+    // Tab scroll indicator arrows
+    // To hide them, we give their elements no `content_margin`
+    {
+        "class": "scroll_tabs_left_button",
+    },
+    {
+        "class": "scroll_tabs_right_button",
+    },
+
 //
 // TABS (REGULAR)
 //
