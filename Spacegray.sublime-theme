@@ -1,5 +1,25 @@
 [
 
+//
+// TITLE BAR
+//
+
+    {
+        "class": "title_bar",
+        "settings": ["spacegray_title_bar_dark"],
+        "fg": [101, 115, 126],
+        "bg": [28, 28, 38]
+    },
+    {
+        "class": "title_bar",
+        "settings": [
+            "spacegray_title_bar_dark",
+            "spacegray_high_contrast_mode"
+        ],
+        "fg": [140, 154, 166]
+    },
+
+
     // Tabs dropdown
     {
         "class": "show_tabs_dropdown_button",
