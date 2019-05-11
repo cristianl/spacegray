@@ -1,50 +1,6 @@
 [
 
 //
-// TITLE BAR
-//
-
-    {
-        "class": "title_bar",
-        "settings": ["spacegray_title_bar_dark"],
-        "fg": [96, 110, 121],
-        "bg": [28, 28, 38]
-    },
-    {
-        "class": "title_bar",
-        "settings": [
-            "spacegray_title_bar_dark",
-            "spacegray_high_contrast_mode"
-        ],
-        "fg": [164, 178, 190]
-    },
-
-
-    // Tabs dropdown
-    {
-        "class": "show_tabs_dropdown_button",
-        "layer0.texture": "Theme - Default/common/light/tab_dropdown.png",
-        "layer0.opacity": { "target": 0.35, "speed": 4.0, "interpolation": "smoothstep" },
-        "content_margin": [10, 10]
-    },
-    {
-        "class": "show_tabs_dropdown_button",
-        "attributes": ["hover"],
-        "layer0.opacity": { "target": 0.9, "speed": 4.0, "interpolation": "smoothstep" }
-    },
-
-    // Tab scroll indicator arrows
-    // To hide them, we give their elements no `content_margin`
-    {
-        "class": "scroll_tabs_left_button",
-        "content_margin": [0, 0]
-    },
-    {
-        "class": "scroll_tabs_right_button",
-        "content_margin": [0, 0]
-    },
-
-//
 // TABS (REGULAR)
 //
 
@@ -95,13 +51,6 @@
         "attributes": ["selected"],
         "layer0.texture": "",
         "layer0.tint": [35, 38, 52]
-    },
-    // Tab dirty state (close button hidden)
-    {
-        "class": "tab_control",
-        "settings": ["!show_tab_close_buttons"],
-        "attributes": ["dirty"],
-        "content_margin": [8,0,7,3]
     },
 
 //
@@ -1281,6 +1230,46 @@
         "class": "tabset_control",
         "settings": ["spacegray_tabs_xlarge"],
         "tab_height": 40
-    }
+    },
+
+//
+// TITLE BAR
+//
+
+    {
+        "class": "title_bar",
+        "settings": ["!disable_custom_title_bar"],
+        "fg": [96, 110, 121],
+        "bg": [28, 28, 38]
+    },
+
+//
+// CUSTOM TAB CONTROLS
+//
+
+    // Tabs dropdown
+    // (Reduce brightness of tabs dropdown arrow)
+    {
+        "class": "show_tabs_dropdown_button",
+        "layer0.texture": "Theme - Default/common/light/tab_dropdown.png",
+        "layer0.opacity": { "target": 0.35, "speed": 1.0, "interpolation": "smoothstep" },
+        "content_margin": [10, 10]
+    },
+    {
+        "class": "show_tabs_dropdown_button",
+        "attributes": ["hover"],
+        "layer0.opacity": { "target": 0.9, "speed": 1.0, "interpolation": "smoothstep" }
+    },
+
+    // Tab scroll indicator arrows
+    // To hide them, we give their elements no `content_margin`
+    {
+        "class": "scroll_tabs_left_button",
+        "content_margin": [0, 0]
+    },
+    {
+        "class": "scroll_tabs_right_button",
+        "content_margin": [0, 0]
+    },
 
 ]
