@@ -7,7 +7,7 @@
     {
         "class": "title_bar",
         "settings": ["spacegray_title_bar_dark"],
-        "fg": [101, 115, 126],
+        "fg": [96, 110, 121],
         "bg": [28, 28, 38]
     },
     {
@@ -16,7 +16,7 @@
             "spacegray_title_bar_dark",
             "spacegray_high_contrast_mode"
         ],
-        "fg": [140, 154, 166]
+        "fg": [164, 178, 190]
     },
 
 
@@ -37,9 +37,11 @@
     // To hide them, we give their elements no `content_margin`
     {
         "class": "scroll_tabs_left_button",
+        "content_margin": [0, 0]
     },
     {
         "class": "scroll_tabs_right_button",
+        "content_margin": [0, 0]
     },
 
 //
@@ -68,7 +70,7 @@
     // Tab element
     {
         "class": "tab_control",
-        "content_margin": [8,0],
+        "content_margin": [8,-1,8,0],
         "max_margin_trim": 0,
         "hit_test_level": 0,
         "layer0.texture": "",
@@ -92,14 +94,14 @@
         "class": "tab_control",
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [41, 44, 56]
+        "layer0.tint": [35, 38, 52]
     },
     // Tab dirty state (close button hidden)
     {
         "class": "tab_control",
         "settings": ["!show_tab_close_buttons"],
         "attributes": ["dirty"],
-        "content_margin": [12,3,7,3]
+        "content_margin": [8,0,7,3]
     },
 
 //
@@ -195,12 +197,13 @@
     {
         "class": "tab_label",
         "fade": true,
-        "fg": [101, 115, 127] // 03
+        "fg": [132, 146, 158],
+        "font.face": "SF Compact Text",
     },
     {
         "class": "tab_label",
         "settings": ["spacegray_high_contrast_mode"],
-        "fg": [160, 174, 186]
+        "fg": [216, 230, 242]
     },
     {
         "class": "tab_label",
@@ -210,7 +213,7 @@
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control","attributes": ["selected"]}],
-        "fg": [210, 212, 219]
+        "fg": [176, 178, 186]
     },
     {
         "class": "tab_label",
@@ -233,6 +236,11 @@
         "class": "tab_label",
         "settings": ["spacegray_tabs_font_large"],
         "font.size": 12.0
+    },
+    {
+        "class": "tab_label",
+        "settings": ["spacegray_tabs_font_custom"],
+        "font.size": 14.5
     },
     {
         "class": "tab_label",
@@ -358,7 +366,7 @@
         "settings": ["overlay_scroll_bars"],
         "layer0.texture": "",
         "layer0.inner_margin": [0,5],
-        "content_margin": [2,32],
+        "content_margin": [4,32],
         "blur": true
     },
     // Overlay horizontal puck
@@ -470,17 +478,17 @@
         "layer0.texture": "",
         "layer0.tint": [28, 28, 38], // -00
         "layer0.opacity": 1,
-        "content_margin": 4
+        "content_margin": 0
     },
     {
         "class": "status_bar",
         "settings": ["spacegray_status_bar_normal"],
-        "content_margin": [-1, 2, 2, 2]
+        "content_margin": [0, -3, 2, -2]
     },
     // Status bar button
     {
         "class": "status_button",
-        "content_margin": [14, 0, 2, 0]
+        "content_margin": [16, 1, 2, -2]
     },
     // Status bar label
     {
@@ -492,14 +500,14 @@
         "class": "label_control",
         "parents": [{"class": "status_bar"}],
         "settings": ["spacegray_status_bar_normal"],
-        "font.size": 16.2,
-        "font.face": "SF Compact Text Light",
-        "color": [120, 126, 138]
+        "font.size": 15.5,
+        "font.face": "SF Compact Text Regular",
+        "color": [134, 140, 152]
     },
     {
         "class": "label_control",
         "settings": ["spacegray_high_contrast_mode"],
-        "color": [140, 154, 166]
+        "color": [204, 218, 230]
     },
 
 //
@@ -511,7 +519,7 @@
         "class": "sidebar_container",
         // "layer0.texture": "",
         "layer0.opacity": 1,
-        "layer0.tint": [39, 41, 52],
+        "layer0.tint": [33, 35, 46],
         "layer0.inner_margin": [1,5,2,1],
         "content_margin": [0,4,0,0]
     },
@@ -562,7 +570,7 @@
     {
         "class": "sidebar_tree",
         "settings": ["spacegray_sidebar_tree_custom"],
-        "row_padding": [8, 6, 8, 5]
+        "row_padding": [6, 6, 4, 5]
     },
     {
         "class": "sidebar_tree",
@@ -589,7 +597,7 @@
     // Sidebar entry
     {
         "class": "sidebar_label",
-        "color": [101, 115, 127] // 03
+        "color": [116, 130, 142] // 03
     },
     {
         "class": "sidebar_label",
@@ -614,7 +622,7 @@
     {
         "class": "sidebar_label",
         "settings": ["spacegray_sidebar_font_custom"],
-        "font.size": 12.5
+        "font.size": 13
     },
     {
         "class": "sidebar_label",
@@ -910,14 +918,14 @@
         "layer0.inner_margin": [0,0],
         "layer0.opacity": 1,
         "layer0.tint": [28, 28, 38], // -00
-        "content_margin": 0
+        "content_margin": 0,
     },
     // Quick panel background
     {
         "class": "overlay_control",
         "layer0.opacity": 1,
         // "layer1.texture": "",
-        "layer1.tint": [51, 61, 70], // 01
+        "layer1.tint": [35, 38, 52],
         "layer1.inner_margin": [0,0,0,0],
         "layer1.opacity": 1,
         "content_margin": 0
@@ -937,7 +945,7 @@
     {
         "class": "quick_panel_row",
         // "layer0.texture": "",
-        "layer0.tint": [51, 61, 70], // 01
+        "layer0.tint": [35, 38, 52],
         "layer0.inner_margin": 8,
         "layer0.opacity": 1
     },
@@ -945,7 +953,7 @@
         "class": "quick_panel_row",
         "attributes": ["selected"],
         // "layer0.texture": "",
-        "layer0.tint": [34, 40, 48] // -01
+        "layer0.tint": [46, 49, 63],
     },
     {
         "class": "quick_panel_label",
@@ -970,18 +978,18 @@
 //
 // MINI QUICK PANEL
 //
-
+// Command palette and quick switch file etc
     {
         "class": "mini_quick_panel_row",
         // "layer0.texture": "",
-        "layer0.tint": [51, 61, 70], // 01
+        "layer0.tint": [35, 38, 52],
         "layer0.opacity": 1
     },
     {
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
         // "layer0.texture": "",
-        "layer0.tint": [34, 40, 48] // -01
+        "layer0.tint": [46, 49, 63],
     },
 
 //
@@ -1267,7 +1275,7 @@
     {
         "class": "tabset_control",
         "settings": ["spacegray_tabs_custom"],
-        "tab_height": 36
+        "tab_height": 35
     },
     {
         "class": "tabset_control",
